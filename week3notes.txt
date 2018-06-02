@@ -1,0 +1,14 @@
+Javascript
+    Variables
+        Nouns in the programming language.
+        example var name = " The name"
+        variables have types. numbers, strings, booleans
+    Logging, alerting, prompting
+        log - record 
+        alert - display on the user screen
+        prompt - 
+        confirm
+
+    arrays
+    if/else statments
+
