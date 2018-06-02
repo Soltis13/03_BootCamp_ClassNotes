@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Steak Sandwich Website</title>
+</head>
+<body>
+    <script>
+    
+    //ask user do they eat steak
+    var UserSteakSandwich = confirm("Do you eat Steak?");
+
+    //ask user's brith year- - if under 21 1997 - alert "no sake for you!"
+    var UserAge = prompt("What year where you born?");
+
+    //if yes - write "Here's a steak sandwich."
+    if (UserSteakSandwich) {
+        document.write("Here's a steak sandwich");
+    }
+    // if no - write "Here's a Tofu Stir Fry!"
+    else{
+        document.write("Here's a Tofu Stir Fry");
+    }
+ 
+    if(UserAge >= 1997) {
+        document.write("No sake for you!");
+    }
+    
+    </script>
+</body>
+</html>

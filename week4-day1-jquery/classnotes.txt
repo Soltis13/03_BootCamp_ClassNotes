@@ -1,0 +1,4 @@
+jQuery - is a framework used to help define javascript and do things faster and more defeined.
+
+npm
+

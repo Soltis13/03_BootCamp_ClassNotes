@@ -1,0 +1,64 @@
+header, footer{
+    padding: 1em;
+    color: #eee;
+    background-color: #333333;
+    clear: left;
+    text-align: center;
+}
+body{
+    padding: 0 Auto;
+    margin: 0 Auto;
+    color: #333333;
+    background-color: #efeee7;
+}
+
+h1{
+    color: #eee;
+    font: 28px;
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+h2{
+    padding: 0 auto;
+    margin: 0 auto;
+    font: 24px;
+}
+.container{
+    min-width: 1024px;
+    margin: 0 auto;
+}
+
+#bioimage{
+    float: left;
+    padding: 1em;
+    margin: 1em;
+}
+
+#name{
+    margin-bottom: 1em;
+}
+
+#image1{
+    width: 200px;
+    margin-bottom: 1em;
+}
+
+#mainbio{
+    float: left;
+    width: 40%;
+    padding-top: 3em;
+    margin: 1em;
+
+}
+
+#contactinfo{
+    float: left;
+    width: 30%;
+    padding: 1em;
+    margin: 1em;
+    line-height: 150%;
+}
+a:link{
+    color: red;
+}

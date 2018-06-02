@@ -1,0 +1,38 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 1;
+    line-height: auto;
+    letter-spacing: auto;
+
+}
+#para1{
+    font-family: 'Pangolin', cursive;
+}
+
+#para2{
+    font-family: 'Libre Barcode 39', cursive;
+}
+
+#para3{
+    font-family: 'Indie Flower', cursive;
+}
+ /* unvisited link */
+ a:link {
+    color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+    color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+    color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+    color: #0000FF;
+} 

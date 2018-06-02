@@ -1,0 +1,12 @@
+Browser Events
+    Mouse Events
+    Key Events
+
+Look in the web page and grab the element with ID . . .
+var usertext = docuemnt.getelementbyid("user-text");
+
+when the key is released, in the function the value in userText is changed to the event.key or the key pressed.
+
+docuemnt.onkeyup = function(event) {
+    userText.textContent  = event.key;
+};

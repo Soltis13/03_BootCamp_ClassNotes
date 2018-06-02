@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>lexicalScope</title>
+</head>
+<body>
+
+  <script type="text/javascript">
+
+    // Run this program. Then turn to the person next to you and answer the following questions:
+    // 1. What is the difference (in output) between Situation 1 and Situation 2?
+    // 2. Why are the alert messages different? (Hint: Look for syntax differences)
+
+
+
+// in situation 1 - global var is redifined in fucntoin a1, while in sit 2 the variable is not and 
+    // Situation 1
+    // ------------------------------------------
+    var myVar1 = 1;
+
+    function a1() {
+      myVar1 = 5 - 3;
+       //takes output of b1 
+      alert("Q1 | a: " + myVar1); // alerts out 5-3 = 2
+    }
+    //b1 is never called directly.
+    function b1() {
+      alert("Q1 | b: " + myVar1);// alerts out function a1 myVar of 2
+    }
+    a1(); //calls a1 to alert out b1 of 1
+    b1();
+
+    // Situation 2
+    // ------------------------------------------
+    var myVar2 = 1;
+
+    function a2() {
+      var myVar2 = 5 - 3;
+      b2();
+      alert("Q2 | a: " + myVar2);
+    }
+
+    function b2() {
+      alert("Q2 | b: " + myVar2);
+    }
+    a2();
+
+  </script>
+</body>
+</html>

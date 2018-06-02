@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Calculator</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<!-- Jumbotron for Title -->
+<div class="jumbotron">
+    <h1 class="text-center">jQuery Calculator</h1>
+    <h3 class="text-center">Perform basic mathematic operations using the power of jQuery!</h3>
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+      <!-- Calculator Panel -->
+      <div class="col-lg-4">
+        <div class="card">
+          <h3 class="card-header">Calculator</h3>
+
+          <div class="card-body">
+            <button id="button-1" class="btn btn-primary number" value="1"><h1>1</h1></button>
+            <button id="button-2" class="btn btn-primary number" value="2"><h1>2</h1></button>
+            <button id="button-3" class="btn btn-primary number" value="3"><h1>3</h1></button>
+            <button id="button-plus" class="btn btn-danger operator" value="plus"><h1>+</h1></button>
+            <br><br>
+            <button id="button-4" class="btn btn-primary number" value="4"><h1>4</h1></button>
+            <button id="button-5" class="btn btn-primary number" value="5"><h1>5</h1></button>
+            <button id="button-6" class="btn btn-primary number" value="6"><h1>6</h1></button>
+            <button id="button-minus" class="btn btn-danger operator" value="minus"><h1>&minus;</h1></button>
+            <br><br>
+            <button id="button-7" class="btn btn-primary number" value="7"><h1>7</h1></button>
+            <button id="button-8" class="btn btn-primary number" value="8"><h1>8</h1></button>
+            <button id="button-9" class="btn btn-primary number" value="9"><h1>9</h1></button>
+            <button id="button-multiply" class="btn btn-danger operator" value="times"><h1>&times;</h1></button>
+            <br><br>
+            <button id="button-0" class="btn btn-primary number" value="0"><h1>0</h1></button>
+            <button id="button-divide" class="btn btn-danger operator" value="divide"><h1>&divide;</h1></button>
+            <button id="button-power" class="btn btn-danger operator" value="power"><h1>^</h1></button>
+            <button id="button-equal" class="btn btn-success equal" value="equals"><h1>=</h1></button>
+            <br><br>
+            <button id="button-clear" class="btn btn-dark clear" value="clear"><h1>clear</h1></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Panel -->
+      <div class="col-lg-6">
+        <div class="card">
+          <h3 class="card-header">Result</h3>
+          <div class="card-body">
+            <h1 id="first-number"></h1>
+            <h1 id="operator"></h1>
+            <h1 id="second-number"></h1>
+            <hr>
+            <h1 id="result"></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+  var firstNumFull = '';
+  var secondNumFull = '';
+  var calcOperator = '';
+  var opsSelect = false;
+  var finalNum = 0;
+  var firstNumSelect = false;
+
+//functionality 
+//functions for oberations
+//plus
+//minus
+//divide
+//if zero - return false
+  //numbers - record value into variable
+  $(".number").on("click", function () {
+    if (!opsSelect) {
+      firstNumSelect = true;
+      console.log(this.value);
+      var number = (this.value);
+
+      firstNumFull = firstNumFull + number;
+
+      $("#first-number").html(firstNumFull);
+    } else {
+      console.log(opsSelect + "this is the else");
+      console.log(this.value);
+      var number = (this.value);
+
+      secondNumFull += number;
+
+      $("#second-number").html(secondNumFull);
+    }
+  })
+
+  //Displays operator
+  $(".operator").on("click", function () {
+    if (firstNumSelect === false) {
+      return;
+    }
+    opsSelect = true;
+    console.log(firstNumFull);
+    console.log(this.value);
+    calcOperator = (this.value);
+
+    if (calcOperator === "plus") {
+      $("#operator").html("+");
+    } else if (calcOperator === "minus") {
+      $("#operator").html("&minus;");
+    } else if (calcOperator === "times") {
+      $("#operator").html("&times;");
+    } else if (calcOperator === "divide") {
+      $("#operator").html("&divide;");
+    } else if (calcOperator === "power") {
+      $("#operator").html("^");
+    }
+  })
+  
+  $(".equal").on("click", function(){
+    if (firstNumSelect === false && opsSelect === false) {
+      return;
+    }
+    var results = 0;
+    firstNumFull = parseInt(firstNumFull);
+    secondNumFull =  parseInt(secondNumFull);
+    if (calcOperator === "plus") {
+      results = firstNumFull + secondNumFull;
+      $("#result").html(results);
+    } else if (calcOperator === "minus") {
+      results = firstNumFull - secondNumFull;
+      $("#result").html(results);
+    } else if (calcOperator === "times") {
+      results = firstNumFull * secondNumFull;
+      $("#result").html(results);
+    } else if (calcOperator === "divide") {
+      results = firstNumFull / secondNumFull;
+      $("#result").html(results);
+    } else if (calcOperator === "power") {
+      results = Math.pow(firstNumFull, secondNumFull);
+      $("#result").html(results);
+    }
+  });
+
+  $("#button-clear").on("click", function(){
+    if (firstNumSelect === false && opsSelect === false) {
+      return;
+    }
+    $("#first-number").html(" ");
+    $("#operator").html(" ");
+    $("#second-number").html(" ");
+    $("#result").html(" ");
+    firstNumFull = '';
+    secondNumFull = '';
+    calcOperator = '';
+    opsSelect = false;
+    firstNumSelect = false;
+  });
+});
+
+  
+  		//equals
+  		//clear
+ 
+//output section
+  //inner.html results
+  
+  //order of valid inputs
+  	//if only input blue(numbers) then input of red (operators) then if only input blue(numbers) then only input of equals
+  //results box
+  //print the numbers if number
+  //print an operator
+  //print another number
+  //print the solve on 
+  
+  
+//record user input
+  //on click
+  
+  //each number button should have a corisponding id or html value
+  // same with operators and equals and clear
+
+</script>
+
+</body>
+</html>
+
+

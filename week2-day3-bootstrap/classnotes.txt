@@ -1,0 +1,20 @@
+## Saturday class Notes - Bootstrap
+
+wireframing tools  
+balsamiq "https://balsamiq.com  
+framebox: http://framebox.rg  
+pen and paper  
+
+Grids for photoshop  
+960 GS http://960.GS  
+guideGuide: htttps://guideguide.ms  
+
+Designing with grids guides:  
+960 grid system made easy : http://bit.ly/1sjYaFC  
+design by grid http://www.designbygrid.comdesigning with grid-based approach: http://bit.ly/1CM4Hzo  
+
+
+
+Design for mobil first.
+- Where are the break points and best practice in the industry?
+
