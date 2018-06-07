@@ -1,0 +1,54 @@
+Get started with APIs
+https://developers.google.com/calendar/overview
+
+
+A collective LIst of APIs. Build Something
+https://apilist.fun/
+https://dev.mailjet.com/guides/#make-your-first-request
+
+Rapid API
+https://docs.rapidapi.com/docs
+https://market.mashape.com
+
+
+https://search.freecodecamp.org/?q=json%20apis%20and%20ajax%0A
+
+AJAX - Code in javascript to send request to the server without having to reload the web page.
+
+    html request
+
+    function loadData() {
+        //Create an XHR Object
+        const shr = new XMLHttpRequest();
+
+        //Open (specify the type of request)
+        xhr.open('GET', 'data.txt', true) 
+            // get- type of request
+            // data.txt the location to load to 
+            // true makes it asynchronous
+        
+        xhr.onlaod = function(){
+            if(this.status ===200){
+
+            }
+        }
+
+        //xhr.onreadystatechange = function() {
+        //   if(this.status === 200 && this.readystate === 4){
+        //
+        //   }
+        //}
+        xhr.send(); //call the actual function
+
+        //HTTp statuses
+        //200 ok
+        //403 forbidden
+        //404 not found
+
+        //readystate Values
+        // 0: request not initialized
+        // 1: server connection established
+        // 2
+        // 3
+        // 4: 
+    }
