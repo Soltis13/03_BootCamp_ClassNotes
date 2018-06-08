@@ -13,6 +13,24 @@ https://market.mashape.com
 
 https://search.freecodecamp.org/?q=json%20apis%20and%20ajax%0A
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 AJAX - Code in javascript to send request to the server without having to reload the web page.
 
     html request
