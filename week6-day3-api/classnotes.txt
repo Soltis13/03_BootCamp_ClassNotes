@@ -1,0 +1,13 @@
+Books on Programming Javascript
+
+    Javascript and jQuery by Jon Duckett
+
+    Javascript Bible by Danny Goodman
+
+    You Don;t know JS (Series) by Kyle Simpson
+
+    Composing Software by Eric Elliot
+
+    Clean Coder by Robert C Martin
+
+

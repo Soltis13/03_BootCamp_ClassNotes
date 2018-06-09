@@ -54,23 +54,30 @@
       
           // Retrieves the Rating Data
           console.log(response)
-         var movie = $("<div>").text("Movie Rating " + response.Rated);
+          //var movie = $("<div>").text("Movie Rating " + response.Rated);
           // Creates an element to have the rating displayed
+          var movieDiv = $("<div class = 'movie'>")
+          var rating = response.Rated;
+          var p0ne = $("<p>").text("Released: " + released);
+          movieDiv.append(p0ne);
+
+
+
 
           // Displays the rating
-          $("#movies-view").append(movie)
+          //$("#movies-view").append(movie)
           // Retrieves the release year
-          var releaseYear = $("<div>").text("Release Year "+ response.Released);
+          //var releaseYear = $("<div>").text("Release Year "+ response.Released);
           // Creates an element to hold the release year
           // Displays the release year
-          $("#movies-view").append(releaseYear);
+          //$("#movies-view").append(releaseYear);
           // Retrieves the plot
           // Creates an element to hold the plot
           // Appends the plot
-          $("#movies-view").append($("<div>").text("Plot " + response.Plot))
+          //$("#movies-view").append($("<div>").text("Plot " + response.Plot))
           // Creates an element to hold the image
           // Appends the image
-          $("#movies-view").append($("<img>").attr("src", response.Poster))
+          //$("#movies-view").append($("<img>").attr("src", response.Poster))
           // Puts the entire Movie above the previous movies.
         });
 
