@@ -1,5 +1,7 @@
-    $("#Search").on("click", function() {
-    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    $("#Search").on("click", function(event) {
+        event.preventDefault()
+
+        var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     
     // url += '?' + $.param({
     // 'api-key': "7839683277ad4bcfbec7be6f9e388f1f"
@@ -11,10 +13,10 @@
     var StartYear = $("#StartYear").val()
     var data = [];
 
-    var SearchTerm = "Trump"
-    var NoRecord = 5
-    var EndYear = ""
-    var StartYear = ""
+    // var SearchTerm = "Trump"
+    // var NoRecord = 5
+    // var EndYear = ""
+    // var StartYear = ""
 
 
     url += '?' + $.param({

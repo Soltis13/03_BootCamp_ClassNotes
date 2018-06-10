@@ -23,7 +23,7 @@ ID6  - button - ClearResults
 
 Row 3 - (info out)
 
-ID7 -  output div - TopArtical
+ID7 -  output div - TopArticles
 
 * Do preliminary research on the [API](http://developer.nytimes.com/article_search_v2.json).
 
