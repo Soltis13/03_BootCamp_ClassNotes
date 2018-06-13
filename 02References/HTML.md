@@ -11,7 +11,7 @@
 
 ### Structure
 
-  <p attribute Name = "attribute value" > Text in Paragraph </p>
+  < p attribute Name = "attribute value" > Text in Paragraph </ p >
 
 ### Text
 
