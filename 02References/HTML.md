@@ -7,6 +7,34 @@
   
   w3school - https://www.w3schools.com/
 
+## Sections
+
+### Structure
+
+  <p attribute Name = "attribute value" > Text in Paragraph </p>
+
+### Text
+
+### Lists
+
+### Links
+
+### Images
+
+### Tables
+
+### Forms
+
+### Extra Markup
+
+### Flash, Video, Audio
+
+
+
+
+
+#Old
+
 ## HTML Page Components
   DocType - Declares the version of the HTMl document.  
   Elements & Tags - contains text, image, video <! <tagname>Content</tagname>>  
