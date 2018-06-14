@@ -141,9 +141,27 @@
   
 ### Extra Markup  
 
-### Flash, Video, Audio  
+block level elements : Start on a new row : hl, p, ul, li  
+inline elements: continue next to last ; a, b, em, img  
+
+div will combine text and elements in a lock  
+span will compain tet and elements in inline  
+
+< iframe > : used to create a window inside teh current window  
+
+### Flash, Video, Audio    
+   
+Flash : easy way to add flash is with a javascript code such as a googleapi ajax.  
+
+Video (HTML5)  
+< video > : adding video in element  
+< source > :  specifies the location of the video to play   
 
 
+Audio:  can be added with javascript as well  
+
+< audio >  : like the video link but to link to audio source
+< source > : specifies the location of the video to play   
 
 
 

@@ -1,6 +1,35 @@
 # CSS Reference Sheet  
 CSS describes how HTML elements should be displayed.  
 
+### Basics  
+
+box model - margin border padding text
+
+selector { dec: declaration;}
+
+    Use calmas to select multiple selectors at the same time.
+
+    Use a space to select down to a spedcific selector with parent child divs
+
+### Color  
+
+### Text  
+
+### Boxes  
+
+### Lists, Table & Forms  
+
+### Layout  
+
+### Images  
+
+###HTML5 Layout Changes  
+
+
+
+
+# Old
+
 ## Properties
 Align-content   	Specifies the alignment between the lines inside a flexible container when the items do not use all available space  
 background-color	Specifies the background color of an element  
