@@ -44,11 +44,15 @@
     // FUNCTIONS + EVENTS
     // --------------------------------------------------------------------------------
 
+    var val = "Help, stop clicking on me!"
     $("#click-button").on("click", function() {
       clickCounter++;
       database.ref().set({
         clickCount: clickCounter
+        
+        
       });
+      
     });
 
     // MAIN PROCESS + INITIAL CODE

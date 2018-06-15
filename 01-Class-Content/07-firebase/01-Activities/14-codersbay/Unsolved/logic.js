@@ -1,11 +1,19 @@
 // Initialize Firebase
 // Make sure to match the configuration to the script version number in the HTML
 // (Ex. 3.0 != 3.7.0)
-
+var config = {
+  apiKey: "AIzaSyC5zdDcMvII0JgaWYyeIFDmwDZdIg1c1dU",
+  authDomain: "webdevbootcamp-e63f7.firebaseapp.com",
+  databaseURL: "https://webdevbootcamp-e63f7.firebaseio.com",
+  projectId: "webdevbootcamp-e63f7",
+  storageBucket: "",
+  messagingSenderId: "686459628072"
+};
+firebase.initializeApp(config);
 
 // Assign the reference to the database to a variable named 'database'
 // var database = ...
-
+var database = firebase.database();
 
 // Initial Values
 var initialBid = 0;
@@ -23,14 +31,17 @@ database.ref().on("value", function(snapshot) {
   if (snapshot.child("highBidder").exists() && snapshot.child("highPrice").exists()) {
 
     // Set the variables for highBidder/highPrice equal to the stored values in firebase.
-    // highPrice = ...
-    // highBidder = ...
+    highPrice = snapshot.val().highPrice;
+    highBidder = snapshot.val().highBidder;
 
 
     // Change the HTML to reflect the stored values
-
+    $("#highest-bidder").text(snapshot.val().highBidder)
+    $("#highest-price").text(snapshot.val().highPrice)
 
     // Print the data to the console.
+    console.log(highPrice)
+    console.log(highBidder)
 
 
   }
@@ -39,9 +50,13 @@ database.ref().on("value", function(snapshot) {
   else {
 
     // Change the HTML to reflect the initial values
+    $("#highest-bidder").text(initialBidder)
+    $("#highest-price").text(initialBid)
 
 
     // Print the data to the console.
+    console.log(initialBid)
+    console.log(initialBidder)
 
 
   }
@@ -60,16 +75,24 @@ $("#submit-bid").on("click", function(event) {
   event.preventDefault();
 
   // Get the input values
+  var bidderName = $("#bidder-name").val()
+  var bidderPrice = $("#bidder-price").val()
 
-
+    console.log(bidderPrice)
+    console.log(highPrice)
   // Log the Bidder and Price (Even if not the highest)
-  if (bidderPrice > highPrice) {
+ if (bidderPrice > highPrice) {
 
     // Alert
     alert("You are now the highest bidder.");
 
     // Save the new price in Firebase
+    database.ref().set({
+      highPrice: bidderPrice,
+      highBidder: bidderName,
 
+
+    })
 
     // Log the new High Price
 
@@ -78,10 +101,11 @@ $("#submit-bid").on("click", function(event) {
 
 
     // Change the HTML to reflect the new high price and bidder
+    $("#highest-bidder").text(bidderName)
+    $("#highest-price").text(bidderPrice)
+ }
 
-  }
-
-  else {
+ else {
     // Alert
     alert("Sorry that bid is too low. Try again.");
   }

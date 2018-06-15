@@ -80,15 +80,27 @@
   <!-- LINK TO FIREBASE GOES HERE -->
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
+  <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyC5zdDcMvII0JgaWYyeIFDmwDZdIg1c1dU",
+    authDomain: "webdevbootcamp-e63f7.firebaseapp.com",
+    databaseURL: "https://webdevbootcamp-e63f7.firebaseio.com",
+    projectId: "webdevbootcamp-e63f7",
+    storageBucket: "",
+    messagingSenderId: "686459628072"
+  };
+  firebase.initializeApp(config);
+  </script>
   <!-- Script -->
   <script>
     //  START CODING BELOW!!
 
     // Initialize Firebase
-
+    firebase.initializeApp(config);
 
     // Create a variable to reference the database
-
+    var database = firebase.database();
 
     // Capture Button Click
     $("#add-user").on("click", function(event) {
@@ -98,14 +110,26 @@
       // YOUR TASK!!!
 
       // Code in the logic for storing and retrieving the most recent user.
+      var nameInput = $("#name-input").val().trim();
+      var emailInput =  $("#email-input").val().trim();
+      var ageInput =  $("#age-input").val().trim();
+      var commentInput =  $("#comment-input").val().trim();
+      
+      database.ref().set({
+        name: nameInput,
+        email: emailInput,
+        age: ageInput,
+        comment: commentInput
 
+
+      });
       // Don't forget to provide initial data to your Firebase database.
 
     });
 
 
     // Firebase watcher + initial loader HINT: .on("value")
-
+    database.ref().on(snapshot.val());
 
     // Create Error Handling
   </script>
