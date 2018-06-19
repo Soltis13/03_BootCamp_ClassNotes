@@ -21,3 +21,6 @@
   * Continue refining the design! Take things to the next level. Make this application portfolio-grade!
 
   * Begin reading about `push({})` and `.on("child_added")` in the Firebase documentation.
+
+
+Include these fields
