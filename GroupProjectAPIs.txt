@@ -1,0 +1,58 @@
+Other Notes
+- Add a go to buy button under the listing.  Could that link be an affiliate link.
+
+
+https://developer.stubhub.com/store/site/pages/doc-reference.jag
+
+
+https://platform.seatgeek.com/
+
+    API Endpoint
+    https://api.seatgeek.com/2
+
+    Resource Endpoints
+    /events
+    /events/{EVENT_ID}
+    /performers
+    /performers/{PERFORMER_ID}
+    /venues
+    /venues/{VENUE_ID}
+
+    Events
+    To find an events matching specific search criteria you must send a request to the /events endpoint. Sending a request to /events will return a paginated list of all events.
+
+    geoip: optional, default is false
+    Accepts one of: a valid IP address (useful when making a request server-side on behalf of a client); a valid US or Canadian postal code; or true, to attempt to geolocate by the requesting client's IP (useful when calling directly from a browser).
+
+https://www.eventbrite.com/developer/v3/endpoints/events/#ebapi-get-events-search
+
+    GET /events/search/¶
+    Allows you to retrieve a paginated response of public event objects from across Eventbrite’s directory, regardless of which user owns the event.
+
+
+https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
+
+    Event Search
+    Method: GET
+
+    Description: Find events and filter your search by location, date, availability, and much more.
+
+    /discovery/v2/events
+
+https://developer.ebay.com/api-docs/buy/browse/resources/methods
+
+    API Reference : Resources
+    The Browse API has the following resources:
+
+    item_summary: Lets shoppers search for specific items by keyword, GTIN, category, product, or item aspects and refine the results by using filters.
+    item: Lets you retrieve the details of a specific item or all the items in an item group, which is an item with variations such as color and size. This resource also provides a bridge between the eBay legacy APIs, such as Trading and Finding, and the RESTful APIs, such as Browse, which use different formats for the item IDs. You can use the Browse API to retrieve the basic details of the item and the RESTful item ID using a legacy item ID.
+
+craigs list - RSS only, no api
+https://minneapolis.craigslist.org/d/tickets/search/sss?query=twins%20rangers&sort=rel
+
+
+Meta search for event ticket apis
+https://www.predicthq.com/product/api/search
+    30 day free trial
+
+http://api.eventful.com/tools

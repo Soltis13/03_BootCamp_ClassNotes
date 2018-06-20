@@ -47,7 +47,16 @@
 
     Object - a grouping of variabales and functions
 
-        var obj = {}    
+        var obj = {}
+        var newvar = object.name;
+
+        object.name = Park;  -(update the object with name)
+        object['name'] = Park;
+
+        this - (keyword used in an object to refer to tht object)
+
+        Built in Objects
+
 
 ### Decisions and Loops
 
