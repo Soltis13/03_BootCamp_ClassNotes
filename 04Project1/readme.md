@@ -1,6 +1,6 @@
-Initial Notes
+### Initial Notes
 
-Depending on team size, assign roles for responsibiliites.
+## Depending on team size, assign roles for responsibiliites.
 
   Front End - Designer (Pages layout, font, colors, CSS)  
   Front End - Coder (frameworks used, coding mvp, HTML )  
@@ -10,17 +10,17 @@ Depending on team size, assign roles for responsibiliites.
   Tester/s - (Debug and review mvps)  
   
   
-  Team Members
+ ## Team Members
     Lisa
     Abbi
     Ch
   
-  Tools
+ ## Tools
     Trello
     GitHub and GitHub Issues
   
   
-  Requirements
+##  Requirements
   
   must use 2 apis  
   must use ajax to pull data  
@@ -33,12 +33,12 @@ Depending on team size, assign roles for responsibiliites.
   must be Deployed (Github Pages)  
   Must have User Input Validation (Face++ library)  
   
-  Nice to Haves  
+###  Nice to Haves  
   Use firebase for data storage  
   Mobile Responsive Media queries ( pick 2-3 mobile sizes )  
   use an alternate CSS framework like Materialize  
   
-  Presentation Requirements  
+###  Presentation Requirements  
   give 10 mnnute presetntaion  
   Explain  
     Your overall application conccep  
@@ -47,14 +47,14 @@ Depending on team size, assign roles for responsibiliites.
     technologies you used  
     demonstration of its functionality (Ideas for future development and improvments)  
   
-  Metrics  
+ ### Metrics  
     concept  
     design  
     functionality  
     collaboration  
     presentation  
     
-   Awards
+ ###  Awards
    Most Awe inspiring
    most useful
    most creative
@@ -62,8 +62,8 @@ Depending on team size, assign roles for responsibiliites.
    best ui/ux
    
    
-    
-   Sports Landing Page
+  ### Ideas  
+  1.  Sports Landing Page
     Enter your favoirte team
     display
       latest news
