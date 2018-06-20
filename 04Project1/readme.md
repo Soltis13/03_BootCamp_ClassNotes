@@ -13,7 +13,9 @@
  ## Team Members
     Lisa
     Abbi
-    Ch
+    Chery
+    Scott
+    Jag
   
  ## Tools
     Trello
