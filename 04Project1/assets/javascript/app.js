@@ -5,15 +5,68 @@
 var events = ["music", "Jazz"];
 
 var movie = "Music";
-var queryURL = "http://api.eventful.com/json/events/search?" + events + "&location=Minneapolis&t=This+Weekend&c=music&api_key=jHN2HGKDVRHbwN3q";
+//var queryURL = "http://api.eventful.com/json/events/search?" + events + "&location=Minneapolis&t=This+Weekend&c=music&api_key=jHN2HGKDVRHbwN3q";
 
-var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=" music" &dmaId=324&apikey={apikey}
+//var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?apikey=sNwmsPY4XBIE2JAWvrAaC0ZvUG9KxF8k&keyword="+events+"/"
+var url = 'https://api.foursquare.com/v2/venues/explore';
+
+var queryURL = "https://api.foursquare.com/v2/venues/search?ll=44.9,-93.2&query=library&client_id=GMCZAGCA1IOH5QCGZYJGYVD0YJLAAUGUNLWUJGGOC2IIXKUU&client_secret=IJUOBHZNIW3PY124FYWWAVULHIHDSNW2OZ1GPKDW2ARO1R2V&v=20180623";
+
+//var queryURL2 = "https://app.predicthq.com/events?q=jazz&categories=expos,concerts,festivals,performing-arts,sports,community&labels=all&labels.op=any&ranks=level3,level4,level5&date=next30days&places=5037649,5045360&client_id=phq.Isd4d1v0mKRpBdIknrX8bUDHJcisX9gvM8v64dQT&client_secret=M1eWxhcVj8SrwBrvvBdHpX7x4uQVhsv0SIHBbl0W&v=20180623"
+
+var queryURL3 = "https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2018-05-15&primary_release_date.lte=2018-06-22&api_key=373b98cfb44a36458b78fb8be90e88e2"
+
+var ipurl = "http://api.ipstack.com/131.212.248.60?access_key=a07cea42b7d1f81063d55e1226fe0e86"
+
+
+ var lati;
+
+// var long = 0;
+
+// var location="";
+
+$.ajax({
+  url: ipurl,
+  method: "GET"
+}).done(function(response){
+  console.log("Success got data", response);
+  lati = response.latitude;
+  //long = response.longitude;
+  //location = response.city;
+})
+console.log(lati)
+
+//console.log("lati"+lati+" long "+long+" location "+location)
+
+
 $.ajax({
   url: queryURL,
+  // params: params,
   method: "GET"
 }).then(function(response) {
   console.log("Success got data", response);
-})
+
+  // for (var i = 0; i < response._embedded.events.length; i++){
+  //   console.log(response._embedded.events[i])
+  //     var gifDiv = $("<div class='item col-md-3' >");
+
+  //     var rating = response._embedded.events[i];
+
+  //     var p = $("<p>").text(rating.name);
+  //     var d = $("<img>").attr("src", rating.images[i].url);
+
+      
+
+      
+  //     gifDiv.append(p);
+  //     gifDiv.append(d);
+ 
+
+  //     $("#animals-view").prepend(gifDiv);
+
+  //}
+});
+  
 
 //ajax request for animal image
 // function displayAnimalInfo() {

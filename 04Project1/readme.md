@@ -26,7 +26,7 @@
   
     must use 2 apis  
     must use ajax to pull data  
-    must use anew library or technology  
+    must use a new library or technology  
     must polished front end  
     must meet good quality coding standards  
     must not use alerts, confirms or prompts  
