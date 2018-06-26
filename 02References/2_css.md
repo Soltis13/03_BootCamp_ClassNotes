@@ -12,8 +12,38 @@ selector { dec: declaration;}
     Use a space to select down to a spedcific selector with parent child divs
 
 ### Color  
+    http://colorschemedesigner.com/csd-3.5/  
+    https://www.w3schools.com/colors/colors_picker.asp  
+    RGB Values  ( rgb(100.100.90))   
+    HEX Codes ( #ee3e80)  
+    Color Names (light Green)  
+    hsla (hsla(100%,100%,100%,0.5))  
+
+    COmputer colors are a mix of red, green, and blue.  
+
+    Contrast  
+
+    Opacity fourth term on the rgb scale (rgb(0,0,0,0.5))  
+
+    https://www.websitebuilderexpert.com/how-to-choose-color-for-your-website/
+    There are 3 main colors you need to consider when you are designing your   website:  
+
+        Choosing a dominant color as your brand color  
+            What is the colors personality?
+        Choosing 1 to 2 accent colors to create a color scheme for your website
+            https://color.adobe.com/create/color-wheel/  
+        Choosing a background color to complete your design  
 
 ### Text  
+    Weight
+    Style
+    Stretch
+    Height
+
+    Font Techniques
+        Font-Family - 
+        Font_face
+        Service-Based Font-Face
 
 ### Boxes  
 

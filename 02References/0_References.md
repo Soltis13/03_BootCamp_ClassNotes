@@ -5,6 +5,8 @@ https://codeburst.io/
 https://fontawesome.com/  
 https://fonts.google.com/  
 
+https://www.websitebuilderexpert.com/what-you-need-to-build-a-website-checklist/#hq-images
+
 
 ## Git  
 
