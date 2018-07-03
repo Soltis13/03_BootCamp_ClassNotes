@@ -44,10 +44,69 @@ selector { dec: declaration;}
         Font-Family - 
         Font_face
         Service-Based Font-Face
+    
+    Type Scale   - Generaly set the body text size to 16 px and then base the rest on proportial to the body.
+        pixels 24 px
+        percent - 200%
+        ems - 1.5 ems
+        html - h1
+    
+    font-weight : used to create bold text
+    font Style: italic text
+    Text-transformation: change case to upper, lower, capitalize
+    text-decoration: none / underline / overline / line-through / blink
+    line-hieght: 
+    letter-spacing:
+    word-spacing:
+    text-align : left / right/ justify
+    vertical-align: 
+    :link
+    :visited
+    :active
+    :hover
+    :focus
+
+    Attribute Selectors
+        Existence p[class]
+        equality p[class="dog"]
+        Space p[class~="dog"]
+
+
+
+
 
 ### Boxes  
 
+    Height / min-height / max-height  
+    Width / min-width / max-width  
+    Background Color  
+    overflow : hidden / scroll  
+
+    border / margin / padding  
+    display: inline/block/inline-block/none  
+        display : none - prevents the element from being shown on the page.  
+    visibility: hidden / visable  
+    box-shadow: horiontal   
+    border radius  
+    elliptical shapes  
+
+
+
 ### Lists, Table & Forms  
+    list-style-image: url
+    list-style-position: inside / outside
+    
+    table Properties
+        width
+        padding
+        text-transform
+        letter-spacing
+        border-top / border-bottom
+        text-align
+        background-color
+        :hover
+    
+
 
 ### Layout  
 
