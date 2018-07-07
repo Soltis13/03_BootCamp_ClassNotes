@@ -60,6 +60,22 @@
 
 ### Decisions and Loops
 
+    switch statment : switch(level){case / case / case / default}
+
+    while () {}
+
+    do{} while()
+
+    DOM
+        getElementById()
+        querySelector()
+        getElementsByClassname()
+        getElementsByTagName()
+        querySelectorAll()
+        parentNode
+        previousSibling
+        firstChild()
+
 ### Document Object Model (DOM)   
 
 ### Events
