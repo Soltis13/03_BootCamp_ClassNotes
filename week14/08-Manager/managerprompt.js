@@ -1,6 +1,7 @@
 // dependency for inquirer npm package
 var inquirer = require("inquirer");
 var runs = 0
+var score = 0
 
 // constructor function used to create programmers objects
 function Player(name, position, offense, defense) {
@@ -102,52 +103,73 @@ var createPlayer = function() {
 };
 
 
-function playGame(){
-
-
-    if(runs < 5){
-        //gererate 2 randum numbers
-        var number1 = 10
-        var number2 = 10
-        var totaloffense = 0;
-        var totalDefense = 0;
-        var teamScore = 0;
-        for (var i =0; i<starters.length; i++){
-            totaloffense = totaloffense + starters[i].offense;
-            totalDefense = totalDefense + starters[i].defense;
+var playGame = function() {
+    // if the length of the team array is 5 or higher, no more questions will be asked
+    if (runs < 5) {
+        runs++
+        console.log("---------\nROUND " + runs + "\n---------------------");
+        var num1 = Math.floor(Math.random() * 20)+1;
+        var num2 = Math.floor(Math.random() * 20)+1;
+        var teamoffense = 0
+        var teamdefense = 0
+        
+        for (var i = 0; i<starters.length; i++){
+            teamoffense = teamoffense + starters[i].offense;
+            teamdefense = teamdefense = starters[i].defense;
         }
-    
-        //compar against starters offense and defence
 
-        if((number1) < totaloffense){
-            teamScore ++;
+        if(num1 < teamoffense){
+            score++
         }
-        if((number2) > totalDefense){
-            teamScore --;
+        if(num2 > teamdefense){
+            score--
         }
-        //allow for substitutions
-        console.log("\nDo you want to make a substitution?\n");
-        inquirer.prompt([
+
+      console.log("\nSubPlayer!\n");
+
+      inquirer.prompt([
         {
-            name: "answer",
-            message: "Yes or No: ",
-            validate: function(value) {
-                if (isNaN(value) === false && value === "Yes") {
-                return true;
-                }
-                return false;
-            }
-        }])
-    
+   
+        }, 
+      ]).then(function(answers) {
 
-    }else{
-        return
+   
+      });
+
+      inquirer.prompt([
+        {
+          name: "name",
+          message: "Player's Name: "
+        },  
+      ]).then(function(answers) {
+        // runs the constructor and places the new player object into the variable player.
+        // turns the offense and defense variables into integers as well with parseInt
+        var player = new Player(answers.name, answers.position, parseInt(answers.offense), parseInt(answers.defense));
+        // adds a player to the starters array if there are less than five player objects in it.
+        // otherwise adds the newest player object to the subs array
+        if (starters.length < 3) {
+          starters.push(player);
+          team.push(player);
+          console.log(player.name + " added to the starters");
+        }
+        else {
+          subs.push(player);
+          team.push(player);
+          console.log(player.name + " added to the subs");
+        }
+        // runs the createPlayer function once more
+        createPlayer();
+      });
     }
-    runs++
-    playGame()
+
+    else {
+
+
+      }
 
     
-}
+    }
+};
 
 
 
