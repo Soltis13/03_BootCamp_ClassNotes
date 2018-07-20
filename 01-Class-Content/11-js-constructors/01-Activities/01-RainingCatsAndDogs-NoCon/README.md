@@ -1,6 +1,14 @@
 # **Instructions**
 
 * Make a dogs object with three keys...
+var dog = {
+  'raining': true,
+  'noise': "Woof woof",
+  makeNoise: function() {
+    console.log(this.noise)
+  }
+}
+
 
   * First key called "raining" with a value of true
 
@@ -10,6 +18,13 @@
 
 * Make a cats object with three keys...
 
+var cats = {
+  'raining': false,
+  'noise': "Meow!"
+  makeNoise: function() {
+    console.log(this.noise)
+  }
+}
   * First key called "raining" with a value of false
 
   * Second key called "noise" with a value of "Meow!"
@@ -17,8 +32,10 @@
   * Third key called "makeNoise" which contains a function which console.logs the noise to the screen if it is raining cats
 
 * Make the dog bark
+dog.makeNoise()
 
 * Make the cat meow
+cat.makeNoise()
 
 * BONUS: Create a function called "massHysteria" which takes in both the cats and the dogs object and prints "DOGS AND CATS LIVING TOGETHER! MASS HYSTERIA!" if both of the `raining` keys are equal to true.
 
