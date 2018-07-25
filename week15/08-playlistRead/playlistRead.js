@@ -33,10 +33,17 @@ var connection = mysql.createConnection({
       if (err) throw err;
       
     queryAllSongs()
+    queryDanceSOngs()
       });
 
 function queryAllSongs(){
     connection.query("SELECT * FROM songs", function(err, res) {
+        console.log(res)
+  })
+}
+
+function queryDanceSOngs(){
+    connection.query("SELECT * FROM songs WHERE genre=?", ["Dance"], function(err, res) {
         console.log(res)
   })
 }
