@@ -22,8 +22,14 @@ function handleRequest(req, res) {
   case "/":
     return displayRoot(path, req, res);
 
-  case "/portfolio":
-    return displayPortfolio(path, req, res);
+  case "/foods":
+    return displayFoods(path, req, res);
+
+    case "/movies":
+    return displayMovies(path, req, res);
+
+    case "/frameworks":
+    return displayFrameworks(path, req, res);
 
   default:
     return display404(path, req, res);
@@ -45,7 +51,35 @@ function displayRoot(url, req, res) {
 }
 
 // When someone visits the "http://localhost:8080/portfolio" path, this function is run.
-function displayPortfolio(url, req, res) {
+function displayFoods(url, req, res) {
+  var myHTML = "<html>" +
+    "<body><h1>My Portfolio</h1>" +
+    "<a href='/'>Go Home</a>" +
+    "</body></html>";
+
+  // Configure the response to return a status code of 200 (meaning everything went OK), and to be an HTML document
+  res.writeHead(200, { "Content-Type": "text/html" });
+
+  // End the response by sending the client the myHTML string (which gets rendered as an HTML document thanks to the code above)
+  res.end(myHTML);
+}
+
+// When someone visits the "http://localhost:8080/portfolio" path, this function is run.
+function displayMovies(url, req, res) {
+  var myHTML = "<html>" +
+    "<body><h1>My Portfolio</h1>" +
+    "<a href='/'>Go Home</a>" +
+    "</body></html>";
+
+  // Configure the response to return a status code of 200 (meaning everything went OK), and to be an HTML document
+  res.writeHead(200, { "Content-Type": "text/html" });
+
+  // End the response by sending the client the myHTML string (which gets rendered as an HTML document thanks to the code above)
+  res.end(myHTML);
+}
+
+// When someone visits the "http://localhost:8080/portfolio" path, this function is run.
+function displayFrameworks(url, req, res) {
   var myHTML = "<html>" +
     "<body><h1>My Portfolio</h1>" +
     "<a href='/'>Go Home</a>" +
