@@ -26,9 +26,18 @@
 
 ### Basic Javascript
 
-    Variables - place to store a bit of information
+    
+
+    Variables -var let const
+         place to store a bit of information
+
+    Variable Type
 
         var number / string / boolian
+
+        num to string  String()  .toString()
+        string to number  Number()
+
 
     Array - a variable that stores mulitple values.
 
@@ -79,6 +88,8 @@
 ### Document Object Model (DOM)   
 
 ### Events
+    createElement()
+    className
 
 ### jQuery
 
