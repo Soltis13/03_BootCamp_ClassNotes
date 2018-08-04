@@ -33,27 +33,41 @@ var animals = [
     fierceness: 10
   }
 ];
-
-app.get("/dog", function(req, res) {
-  // Handlebars requires an object to be sent to the dog.handlebars file. Lucky for us, animals[0] is an object!
-
-  // 1. Send the dog object from the animals array to the dog.handlebars file.
-
-});
-
 app.get("/all-pets", function(req, res) {
   // Handlebars requires an object to be sent to the index.handlebars file.
-
+console.log("Queryed all-pets"+" "+res)
   // 2. Send the animals to the index.handlebars file. Remember that animals is an array and not an object.
 
+  res.render("index", { allPets: animals });
 });
 
 app.get("/all-non-pets", function(req, res) {
   // Handlebars requires an object to be sent to the index.handlebars file.
-
+var data = {animals:[]}
   // 3. Send all the animals that are not pets to the index.handlebars file.
-
+  for (var i = 0; i < animals.length; i++) {
+    console.log(animals[i].pet)
+    if (animals[i].pet === false) {
+      console.log(animals[i])
+      res.render('index', {allPets: animals[i]} );
+    }
+  }
 });
+
+app.get("/:type", function(req, res) {
+  // Handlebars requires an object to be sent to the dog.handlebars file. Lucky for us, animals[0] is an object!
+console.log("queried dog", req.url)
+  // 1. Send the dog object from the animals array to the dog.handlebars file.
+  for (var i = 0; i < animals.length; i++) {
+    if (animals[i].animalType === req.params.type) {
+      return res.render('animal', animals[i]);
+    }
+  }
+});
+
+
+
+
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
