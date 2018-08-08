@@ -19,7 +19,7 @@ var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "",
+  password: "root",
   database: "quotes_db"
 });
 
@@ -32,6 +32,62 @@ connection.connect(function(err) {
 });
 
 // Express and MySQL code should go here.
+
+//get
+app.get("/quote", function(req, res) {
+  connection.query("SELECT * FROM quotes;", function(err, data) {
+    if (err) {
+      return res.status(500).end();
+    }
+
+    res.json(data);
+  });
+});
+
+//post app.post
+app.post("/quote", function(req, res) {
+  connection.query("INSERT INTO quotes (quotes) VALUES (?)", [req.body.quotes], function(err, result) {
+    if (err) {
+      return res.status(500).end();
+    }
+
+    // Send back the ID of the new todo
+    res.json({ id: result.insertId });
+    console.log({ id: result.insertId });
+  });
+});
+
+//create app.put
+app.put("/quote/:id", function(req, res) {
+  connection.query("UPDATE quotes SET quotes = ? WHERE id = ?", [req.body.quotes, req.params.id], function(err, result) {
+    if (err) {
+      // If an error occurred, send a generic server failure
+      return res.status(500).end();
+    }
+    else if (result.changedRows === 0) {
+      // If no rows were changed, then the ID must not exist, so 404
+      return res.status(404).end();
+    }
+    res.status(200).end();
+
+  });
+});
+
+//delete app.delete
+app.delete("/quote/:id", function(req, res) {
+  connection.query("DELETE FROM quotes WHERE id = ?", [req.params.id], function(err, result) {
+    if (err) {
+      // If an error occurred, send a generic server failure
+      return res.status(500).end();
+    }
+    else if (result.affectedRows === 0) {
+      // If no rows were changed, then the ID must not exist, so 404
+      return res.status(404).end();
+    }
+    res.status(200).end();
+
+  });
+});
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
