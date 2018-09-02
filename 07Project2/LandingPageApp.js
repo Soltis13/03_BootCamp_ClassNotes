@@ -33,9 +33,14 @@ $("#new-user").on("click", function(event){
 })
 
 //onclick event of - send to user dashboard 
-$("#submit-user").on("click", function(event){
+$('body').on('click', '#submit-user', function () {
     event.preventDefault(); 
     window.location = "UserPage.html";
+ })
 
-})
+// $("#submit-user").on("click", function(event){
+//     event.preventDefault(); 
+//     window.location = "UserPage.html";
+
+// })
 
