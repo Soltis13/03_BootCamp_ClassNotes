@@ -8,3 +8,31 @@ https://nodeschool.io/#workshopper-list
 
 ###Developer
 https://github.com/mochajs/mocha  
+
+### Axios   
+https://www.npmjs.com/package/axios
+
+Promise based HTTP client for the browser and node.js
+
+### body-parser   
+
+
+### MongoDB
+
+
+
+
+### Authentication
+
+    Tools - PassportJS.org
+
+    Tools - Express-Session
+
+
+    Tools - Passport-local
+    passport-local-mongoose
+
+
+
+
+

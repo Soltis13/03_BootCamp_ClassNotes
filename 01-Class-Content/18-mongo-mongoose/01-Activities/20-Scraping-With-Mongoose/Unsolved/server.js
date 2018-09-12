@@ -70,7 +70,18 @@ app.get("/scrape", function(req, res) {
 
 // Route for getting all Articles from the db
 app.get("/articles", function(req, res) {
+  db.Article.find({})
+  
   // TODO: Finish the route so it grabs all of the articles
+
+  .then(function(dbArticle) {
+    // If all Notes are successfully found, send them back to the client
+    res.json(dbArticle);
+  })
+  .catch(function(err) {
+    // If an error occurs, send the error back to the client
+    res.json(err);
+  });
 });
 
 // Route for grabbing a specific Article by id, populate it with it's note
@@ -80,6 +91,21 @@ app.get("/articles/:id", function(req, res) {
   // Finish the route so it finds one article using the req.params.id,
   // and run the populate method with "note",
   // then responds with the article with the note included
+
+  db.Articals.update(
+    {
+      _id: mongojs.ObjectId(req.params.id)
+    },
+  )
+  .populate("note")
+  .then(function(dbArticals) {
+    // If a
+    res.json(dbArticals);
+  })
+  .catch(function(err) {
+    // I
+    res.json(err);
+  });
 });
 
 // Route for saving/updating an Article's associated Note
@@ -89,6 +115,23 @@ app.post("/articles/:id", function(req, res) {
   // save the new note that gets posted to the Notes collection
   // then find an article from the req.params.id
   // and update it's "note" property with the _id of the new note
+
+    // Create a new Note in the db
+    db.Articals.create(req.body)
+    .then(function(dbArticals) {
+      // If a Note was created successfully, find one User (there's only one) and push the new Note's _id to the User's `notes` array
+      // { new: true } tells the query that we want it to return the updated User -- it returns the original by default
+      // Since our mongoose query returns a promise, we can chain another `.then` which receives the result of the query
+      return db.Articals.findOneAndUpdate({}, { $push: { notes: dbNote._id } }, { new: true });
+    })
+    .then(function(dbArticals) {
+      // If the User was updated successfully, send it back to the client
+      res.json(dbArticals);
+    })
+    .catch(function(err) {
+      // If an error occurs, send it back to the client
+      res.json(err);
+    });
 });
 
 // Start the server
