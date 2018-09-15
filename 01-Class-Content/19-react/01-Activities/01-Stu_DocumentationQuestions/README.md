@@ -17,6 +17,7 @@ In this activity, we will begin by installing a few helpful packages and then ex
 1. In the previous section we just installed two packages, Create React App and Yarn. What are they for?
 
 2. What are some benefits of using ReactJS?
+    
 
 3. What is a React component? Hint: Check the "Components and Props" section of the React documentation.
     Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.

@@ -17,7 +17,7 @@ log(myName); // output: ? error
 log(i); // output: ? undefined
 for (var i = 0; i < 5; i++) {
   setTimeout(function() {
-    log(i); // output: ? 0, 1, 2, 3, 4
+    log(i); // output: ?
   }, 100);
 }
 log(i); // output: ? undefined

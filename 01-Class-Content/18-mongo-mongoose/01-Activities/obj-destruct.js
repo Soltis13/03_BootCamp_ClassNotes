@@ -29,6 +29,7 @@ let avatars = [
 const addAvatar = function(avatar) {
   return avatars.concat(avatar);
 };
+const addAvatar => (...avatars, avatar)
 
 const greet = function(avatar) {
   // 2. Update this function to use object destructuring to access the avatar object properties
